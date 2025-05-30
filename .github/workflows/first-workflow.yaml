@@ -9,9 +9,11 @@ jobs:
         - name: Checkout Repo
           #Hash-pinning for your OSS dependencies to protect against repojacking and imposter commits.
           uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-        - name: Welcome message
-          run: echo "hello world"
-        - name: List files
-          run: ls
-        - name: Read file
-          run: cat README.md
+        - name: list and read files
+          run: |
+            echo "hello world"
+            ls
+            cat README.md
+        - name: Generate ASCII Artwork
+          run: cowsay -f dragon "dracarys" 
+
