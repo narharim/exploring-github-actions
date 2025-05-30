@@ -9,7 +9,5 @@ jobs:
     steps:
         - name: Checkout Repo
           uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-        - name: Install cowsay
-          run: sudo apt-get install cowsay -y
-        - name: Executing cowsay
-          run: cowsay -f dragon "dracarys"
+        - name: Executing script
+          run: ./generate_ascii.sh
