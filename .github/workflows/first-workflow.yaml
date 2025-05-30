@@ -6,6 +6,9 @@ jobs:
   first_job:
       runs-on: ubuntu-latest
       steps:
+        - name: Checkout Repo
+          #Hash-pinning for your OSS dependencies to protect against repojacking and imposter commits.
+          uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         - name: Welcome message
           run: echo "hello world"
         - name: List files
